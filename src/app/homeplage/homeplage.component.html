@@ -70,40 +70,40 @@
   </table>
 
 </div>
-<div class="modal"   role="dialog" [ngStyle]="{'display':displayStyle}">
-  <div class="modal-dialog" role="document">
+<div class="modal modal-xl"   role="dialog" [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <table class="table" border="1">
-          <thead>
-            <tr>
-              <th scope="col">id</th>
-              <th scope="col">bucket_name</th>
-              <th scope="col">source_type</th>
-              <th scope="col">payment_address</th>
-              <th scope="col">primary_sp_address</th>
-              <th scope="col">price_time</th>
-              <th scope="col">total_charge_size</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let row of FBucketData" id={{row.id}}>
-              <td>{{row.id}}</td>
-              <td>{{row.bucket_name}}</td>
-              <td>{{row.source_type}}</td>
-              <td>{{row.payment_address}}</td>
-              <td>{{row.primary_sp_address}}</td>
-              <td>{{row.price_time}}</td>
-              <td>{{row.total_charge_size}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="container-fluid">
+          <div class="row">
+            <table class="table" border="1">
+              <thead>
+                <tr>
+                  <th scope="col">id</th>
+                  <th scope="col">bucket_name</th>
+                  <th scope="col">source_type</th>
+                  <th scope="col">payment_address</th>
+                  <th scope="col">price_time</th>
+                  <th scope="col">total_charge_size</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let row of FBucketData" id={{row.id}}>
+                  <td>{{row.id}}</td>
+                  <td>{{row.bucket_name}}</td>
+                  <td>{{row.source_type}}</td>
+                  <td>{{row.payment_address}}</td>
+                  <td>{{row.price_time}}</td>
+                  <td>{{row.total_charge_size}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary button4" (click)="closePopup()"> Закрыть </button>
       </div>
     </div>
-      
   </div>
 </div>
 
