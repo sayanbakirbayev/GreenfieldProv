@@ -74,7 +74,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let row of ProvData" id={{row.operator_address}}>
-        <td>{{row.moniker}}</td>
+        <td><b>{{row.moniker}}</b></td>
         <td>{{row.website}}</td>
         <td>{{row.funding_address}}</td>
         <td><button class="btn-upd" (click)='openPopup(row.operator_address)'>Show Buckets</button></td>
@@ -113,7 +113,7 @@
             </table>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary button4" (click)="closePopup()"> Закрыть </button>
+        <button type="button" class="btn btn-secondary button4" (click)="closePopup()"> Close </button>
       </div>
     </div>
   </div>
