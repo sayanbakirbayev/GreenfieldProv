@@ -81,14 +81,14 @@ export class HomeplageComponent {
   async loadFilteredBuket(sp_adrress : string){
       console.log(sp_adrress);
       this.FBucketData = [];
-      let FBucketObj : any;
-      const myPromise = new Promise((resolve, reject) => {FBucketObj = this.BucketData.find(({ primary_sp_address }) => primary_sp_address === sp_adrress);
-      resolve('done');
-     })
-      myPromise.then((value) => {
-        console.log(FBucketObj);
-          this.FBucketData.push(FBucketObj);
-    });
+      let Filter : any;
+      for (const element of this.BucketData) {
+        console.log(element);
+        if(element.primary_sp_address===sp_adrress){
+          this.FBucketData.push(element);
+        }
+      }
+
 
  }
 
